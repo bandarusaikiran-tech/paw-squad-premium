@@ -150,20 +150,22 @@
     "name": "t:settings_schema.layout.name",
     "settings": [
       {
-        "type": "range",
+        "type": "select",
         "id": "page_width",
-        "min": 1000,
-        "max": 1600,
-        "step": 100,
-        "default": 1200,
-        "unit": "px",
-        "label": "t:settings_schema.layout.settings.page_width.label"
+        "label": "t:settings_schema.layout.settings.page_width.label",
+        "default": "1200",
+        "options": [
+          { "value": "1000", "label": "1000px" },
+          { "value": "1200", "label": "1200px" },
+          { "value": "1400", "label": "1400px" },
+          { "value": "1600", "label": "1600px" }
+        ]
       },
       {
         "type": "range",
         "id": "spacing_sections",
         "min": 0,
-        "max": 100,
+        "max": 40,
         "step": 4,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.spacing_sections.label",

@@ -1,0 +1,2 @@
+{%- assign header_logo = section.settings.logo | default: settings.logo -%}
+<a class="paw-header__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }} home">{%- if header_logo != blank -%}{{ header_logo | image_url: width: 600 | image_tag: widths: '160, 240, 360, 480, 600', sizes: '(max-width: 749px) 160px, 240px', preload: true, alt: header_logo.alt | default: shop.name }}{%- else -%}<span>{{ shop.name }}</span>{%- endif -%}</a>
